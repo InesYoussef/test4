@@ -1,0 +1,25 @@
+<?php
+namespace Mastering\SampleModule\Cron;
+use AdobeStock\Api\Core\Config;
+use Mastering\SampleModule\Model\ItemFactory;
+
+
+class AddItem{
+
+    private $itemFactory;
+    private $config;
+    public function __construct(ItemFactory $itemFactory,Config $config)
+    {
+        $this->itemFactory=$itemFactory;
+        $this->config==$config;
+    }
+
+    public function execute(){
+        if($this->config->isEnabled()){
+            $this->itemFactory->create()
+                ->setName('Scheduled Item')
+                ->setDescription ('Created at'. time())
+                ->save();
+        }
+    }
+}

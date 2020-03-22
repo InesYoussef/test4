@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mastering_SampleModule::mastering" title="Mastering" module="Mastering_SampleModule" sortOrder="51" resource="Mastering_SampleModule::mastering"
+        translate="title" />
+        <add id="Mastering_SampleModule::h" title="Gérer les vendeurs" module="Mastering_SampleModule" sortOrder="99" parent="Mastering_SampleModule::mastering" action="adminhtml/system_config/edit/section/mastering" resource="Mastering_SampleModule::h"/>
+        <add id="Mastering_SampleModule::he" title="Gérer les clients" module="Mastering_SampleModule" sortOrder="99" parent="Mastering_SampleModule::mastering" action="adminhtml/system_config/edit/section/mastering" resource="Mastering_SampleModule::he"/>
+        <add id="Mastering_SampleModule::hel" title="Gérer les produits" module="Mastering_SampleModule" sortOrder="99" parent="Mastering_SampleModule::mastering" action="adminhtml/system_config/edit/section/mastering" resource="Mastering_SampleModule::hel"/>
+    </menu>
+</config>
+
+
